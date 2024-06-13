@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc && vite build",
     "prepublish": "cd ./public && npm run release ",
-    "publish": "npm run build && cd ./dist && npm publish --registry http://localhost:4873/"
+    "publish": "npm run build && cd ./dist && npm publish --registry http://localhost:4873/",
+    "postpublish": "git push --follow-tags origin master"
   },
   "devDependencies": {
     "standard-version": "^9.5.0",
